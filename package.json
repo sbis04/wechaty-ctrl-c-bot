@@ -1,0 +1,35 @@
+{
+  "name": "wechaty-ctrl-c-bot",
+  "version": "0.4.30",
+  "description": "Helps in handling when the node process stops",
+  "engines": {
+    "node": ">= 12"
+  },
+  "main": "ctrl-c-bot.ts",
+  "scripts": {
+    "gotty": "bash -x install-gotty.sh",
+    "start": "npm install && npm run gotty && pwd && ls -l && npm ls nodemon && ./gotty --ws-origin '.*' npm run bot",
+    "bot": "WECHATY_LOG=verbose nodemon -w ctrl-c-bot.ts ctrl-c-bot.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbis04/wechaty-ctrl-c-bot.git"
+  },
+  "keywords": [],
+  "author": "Huan LI <zixia@zixia.net>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sbis04/wechaty-ctrl-c-bot/issues"
+  },
+  "homepage": "https://github.com/sbis04/wechaty-ctrl-c-bot#readme",
+  "dependencies": {
+    "@chatie/tsconfig": "^0.14.1",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7",
+    "qrcode-terminal": "^0.12.0",
+    "finis": "^0.4.4",
+    "wechaty": "^0.56.6",
+    "wechaty-puppet-mock": "^0.28.2",
+    "wechaty-puppet-wechat4u": "^0.17.4"
+  }
+}

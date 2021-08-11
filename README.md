@@ -1,2 +1,2 @@
-# wechaty-ctrl-c-bot
+# wechaty-ding-dong
 Created with CodeSandbox
